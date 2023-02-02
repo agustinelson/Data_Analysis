@@ -1,11 +1,7 @@
 '''
-
-ejercicio:
-
+Ejercicio:
 leer documento correos para:
-
 obtener una lista con los diferentes dominios
-
 crear nuevo documento indicando nombre de usuario y numero de vocales que contiene el nombre
 '''
 
@@ -28,6 +24,9 @@ while True:
                  usercap.count("U"))
                  
     file2.write(f"{user}\t{numvowels}\n")
+    
+file.close()
+file2.close()
   
 print(f"print domains list: {domains}",)
     
