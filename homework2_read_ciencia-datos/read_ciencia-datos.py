@@ -22,21 +22,30 @@ newwords = []
 
 while character:
     
-  #  print(character, end = "")
     numcharacters += 1
     if character not in newcharacters:
         newcharacters.append(character)
 	
-    if character == " ":
-        if word not in newwords:
-           # print(word)
-            newwords.append(word)
-        numwords += 1
-        word = ""
+    if character in " .,;::()\"":
+        if word.upper() not in newwords and word != "" and word != "\n":
+           newwords.append(word.upper())
+        
+        if word !="":
+            numwords += 1
+            word = ""
+            
     elif character == "\n":
-        print(numparagraphs)
         numparagraphs += 1
+    else:
+        word += character
         
-        
-    word += character
     character = file.read(1) 
+   
+    
+numparagraphs = int((numparagraphs)/2 +1 )
+
+print(f"Number of characters: {numcharacters}")
+print(f"Number of words: {numwords}")
+print(f"Number of paragraphs: {numparagraphs}")
+print(f"Number of new characters: {len(newcharacters)}")
+print(f"Number of new words: {len(newwords)}")
