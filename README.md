@@ -1,2 +1,2 @@
 # Data_Analysis
-This  is a private repositare for Data Analysis class
+This  is a private repository for Data Analysis class
